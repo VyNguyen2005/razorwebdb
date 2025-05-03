@@ -1,0 +1,16 @@
+@page
+@model razorweb.Pages_Blog.DetailsModel
+
+@{
+    ViewData["Title"] = @Model.Article.Title;
+}
+
+<h1>@Model.Article.Title</h1>
+<p><i>@Html.DisplayNameFor(model => model.Article.Created)</i></p>
+<hr>
+@Html.Raw(@Model.Article.Content)
+
+<div class="mt-2">
+    <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@Model.Article.Id">Chỉnh sửa</a> |
+    <a class="btn btn-success" asp-page="./Index">Trở về danh sách</a>
+</div>
