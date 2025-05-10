@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YSAU+LE7c3UNqSnwtNLn2ZG/uc6Zowli/F2Htuo6BGI=",
+  "Hash": "9PPN3LdadB+sx4ajDUCFTssSg16nrvivmV3w2Cq6yn8=",
   "Source": "razorweb",
   "BasePath": "_content/razorweb",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\asp\\razorwebdb\\wwwroot\\text.txt",
+      "SourceId": "razorweb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\asp\\razorwebdb\\wwwroot\\",
+      "BasePath": "_content/razorweb",
+      "RelativePath": "text.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\text.txt"
     }
   ]
 }

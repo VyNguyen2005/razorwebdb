@@ -34,7 +34,7 @@ namespace razorweb.Pages_Blog
                 return Page();
             }
 
-            _context.articles.Add(Article);
+            _context.Articles.Add(Article);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

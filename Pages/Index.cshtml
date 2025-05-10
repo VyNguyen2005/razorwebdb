@@ -1,9 +1,15 @@
 ﻿@page
-@model IndexModel
+@using razorweb.Pages.Blog
 @using razorweb.models
+@model IndexModel
+
 @{
     ViewData["Title"] = "Home page";
     var posts = ViewData["posts"] as List<Article>;
+    if (posts == null)
+    {
+        posts = new List<Article>();  // Tạo danh sách trống để tránh lỗi null
+    }
 }
 
 <div class="text-center">
@@ -16,3 +22,5 @@
         <li>@post.Title</li>
     }
 </ol>
+
+

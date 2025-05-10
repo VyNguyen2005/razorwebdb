@@ -29,7 +29,7 @@ namespace razorweb.Pages_Blog
                 return Content("Không tìm thấy bài viết");
             }
 
-            var article =  await _context.articles.FirstOrDefaultAsync(m => m.Id == id);
+            var article =  await _context.Articles.FirstOrDefaultAsync(m => m.Id == id);
             if (article == null)
             {
                 return Content("Không tìm thấy bài viết");
@@ -70,7 +70,7 @@ namespace razorweb.Pages_Blog
 
         private bool ArticleExists(int id)
         {
-            return _context.articles.Any(e => e.Id == id);
+            return _context.Articles.Any(e => e.Id == id);
         }
     }
 }

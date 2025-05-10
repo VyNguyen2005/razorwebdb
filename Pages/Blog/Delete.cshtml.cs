@@ -28,7 +28,7 @@ namespace razorweb.Pages_Blog
                 return NotFound();
             }
 
-            var article = await _context.articles.FirstOrDefaultAsync(m => m.Id == id);
+            var article = await _context.Articles.FirstOrDefaultAsync(m => m.Id == id);
 
             if (article is not null)
             {
@@ -47,11 +47,11 @@ namespace razorweb.Pages_Blog
                 return NotFound();
             }
 
-            var article = await _context.articles.FindAsync(id);
+            var article = await _context.Articles.FindAsync(id);
             if (article != null)
             {
                 Article = article;
-                _context.articles.Remove(Article);
+                _context.Articles.Remove(Article);
                 await _context.SaveChangesAsync();
             }
 

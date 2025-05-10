@@ -1,0 +1,8 @@
+Phát sinh code CRUD
+dotnet aspnet-codegenerator razorpage -m razorweb.models.Article -dc razorweb.models.MyBlogContext 
+
+Phát sinh code Identity xác thực người dùng, chức năng đăng nhập, đăng xuất
+dotnet aspnet-codegenerator identity -dc razorweb.models.MyBlogContext
+có thể xảy ra lỗi conflict(xung đột) giữa 2 package AspNetCore.Identity và AspNetCore.EntityFramework 
+nên để tránh bị ambiguous(không rõ ràng) thì hãy xóa package AspNetCore.Identity trước khi thực hiện lệnh phát sinh code
+Xóa package Microsoft.AspNetCore.Identity.UI nếu không sử dụng giao diện Identity mặc định

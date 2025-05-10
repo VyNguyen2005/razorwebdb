@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\asp\\razorwebdb\\wwwroot\\text.txt",
+      "PackagePath": "staticwebassets\\text.txt"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.razorweb.props",
       "PackagePath": "build\\razorweb.props"
     },

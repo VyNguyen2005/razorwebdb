@@ -26,7 +26,7 @@ namespace razorweb.Pages_Blog
         public int countPages { get; set; }
         public async Task OnGetAsync(string searchString)
         {
-            int totalArticle = await _context.articles.CountAsync();
+            int totalArticle = await _context.Articles.CountAsync();
             countPages = (int)Math.Ceiling((double)totalArticle / ITEMS_PER_PAGE);
             if(currentPage < 1){
                 currentPage = 1;
@@ -34,7 +34,7 @@ namespace razorweb.Pages_Blog
             if(currentPage > countPages){
                 currentPage = countPages;
             }
-            var qr = (from a in _context.articles
+            var qr = (from a in _context.Articles
                     orderby a.Created descending
                     select a)
                     .Skip((currentPage - 1) * ITEMS_PER_PAGE)
