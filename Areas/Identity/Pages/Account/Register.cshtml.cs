@@ -75,6 +75,12 @@ namespace razorweb.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+            [Display(Name = "UserName")]
+            [Required(ErrorMessage = "Phải nhập {0}")]
+            [DataType(DataType.Text)]
+            [StringLength(100, ErrorMessage = "{0} phải có độ dài từ {2} đến {1} kí tự.", MinimumLength = 3)]
+            public string UserName { get; set; }
+
             [Required(ErrorMessage = "Phải nhập {0}")]
             [EmailAddress(ErrorMessage = "Sai định dạng {0}")]
             [Display(Name = "Email")]
@@ -98,11 +104,7 @@ namespace razorweb.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "Mật khẩu và mật khẩu xác nhận lại không tương đồng.")]
             public string ConfirmPassword { get; set; }
-            [Display(Name = "UserName")]
-            [Required(ErrorMessage = "Phải nhập {0}")]
-            [DataType(DataType.Text)]
-            [StringLength(100, ErrorMessage = "{0} phải có độ dài từ {2} đến {1} kí tự.", MinimumLength = 3)]
-            public string UserName { get; set; }
+     
         }
 
 
@@ -120,7 +122,7 @@ namespace razorweb.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
